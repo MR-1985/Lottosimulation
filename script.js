@@ -27,7 +27,7 @@ jackpot = lottoTicketNumbers.every(zahl=>drawnNumbers.includes(zahl));
 };
 
 checkIfMillionär();
-console.log(`Versuch ${count}: ${drawnNumbers}`);
+console.log(`Versuch ${count}: führte mit den Zahlen, ${drawnNumbers}, zum Jackpot!`);
 
 console.log(count);
 console.log(drawnNumbers);

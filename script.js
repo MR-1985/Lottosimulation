@@ -1,37 +1,34 @@
-const playerNumbers = [1, 2, 3, 4, 5, 6];
-playerNumbers.sort((a, b) => a - b);
-let randomNumbers = [];
-let checkedLength = "";
+const lottoTicketNumbers = [45, 22, 13, 4, 35, 26];
 
 const max = 49;
 const min = 1;
-let count = 0;
 
-createRandomNumbers();
-checkIfMillionär();
+let count = 0;
+let drawnNumbers=[];
+let jackpot = false;
 
 function createRandomNumbers() {
-    while (randomNumbers.length < 6) {
+    let lottoNumbers = []
+    while (lottoNumbers.length < 6) {
         const randomNumber = Math.floor((Math.random()) * (max - min + 1) + min);
-        if (!randomNumbers.includes(randomNumber)) {
-            randomNumbers.push(randomNumber);
-            randomNumbers.sort((a, b) => a - b)
+        if (!lottoNumbers.includes(randomNumber)) {
+            lottoNumbers.push(randomNumber);
         }
     }
+    return lottoNumbers;
 };
-
-console.log(randomNumbers);
 
 function checkIfMillionär() {
-    if (randomNumbers.length === playerNumbers.length) {
-        for (let i = 0; i < playerNumbers.length; i++) {
-            if (playerNumbers[i] !== randomNumbers[i]) {
-                count++
-                checkIfMillionär();
-            }else{
-                console.log("Won")
-                console.log(count)  
-            }
-        }
+    while(!jackpot){
+drawnNumbers = createRandomNumbers();
+count++
+jackpot = lottoTicketNumbers.every(zahl=>drawnNumbers.includes(zahl));
     }
 };
+
+checkIfMillionär();
+console.log(`Versuch ${count}: ${drawnNumbers}`);
+
+console.log(count);
+console.log(drawnNumbers);
+console.log(lottoTicketNumbers);

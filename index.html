@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lottosimulation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="lottoContainer" class="lottoContainer">
         <h1>Lottosimulation</h1>
-        <h3>How often do you think, will it take to win with only one Lottoticket?</h3>
-        <div id="playerNumbers"></div>
-        <div id="drawenLottoNumbers"></div>
-        <div id="countOfDrawes"></div>
-        <div id="winnerText"></div>
+        <h3>How often do you think,<br>will it take to win with only one Lottoticket?</h3>
+        <form id="lottoTicketNumbersInput" onsubmit="handleCreateLottoTicketNumbers(event)">
+            <label for="number1">First number:</label>
+            <input type="number" min="1" max="49" id="number1" name="number1" required><br>
+            <label for="number2">Second number:</label>
+            <input type="number" min="1" max="49" id="number2" name="number2" required><br>
+            <label for="number3">Third number:</label>
+            <input type="number" min="1" max="49" id="number3" name="number3" required><br>
+            <label for="number4">Fourth number:</label>
+            <input type="number" min="1" max="49" id="number4" name="number4" required><br>
+            <label for="number5">Fifth number:</label>
+            <input type="number" min="1" max="49" id="number5" name="number5" required><br>
+            <label for="number6">Sixth number:</label>
+            <input type="number" min="1" max="49" id="number6" name="number6" required><br>
+            <button type="submit" id="submitButton">Try your Numbers</button>
+        </form>
+        <div id="resultContainer" class="resultContainer d-none">
+            <p id="resultText"></p>
+            <button id="reloadButton" class="reloadButton d-none" onclick="reloadPage()">Retry</button>
+            <p id="btcText" class="d-none">
+                Angenommen du hättest einen 130 Euro SOLO Bitcoinminer zu laufen. <br>
+                Hardware: <br>
+                130 € Solo-Miner
+                700 GH/s
+                25 J/TH
+                Verbrauch: 19 W (24/7/365) <br>
+                🎯 Gewinnchancen:
+                Bitcoin-Block finden <b>(pro Tag)</b>:
+                1 zu 9.188.277 <br>
+                6 Richtige im Lotto <b>(ohne Superzahl)</b>:
+                1 zu 15.537.573 <br>
+                💰 Stromkosten:
+                Jahresverbrauch:
+                0,019 kW × 8760 h = 166,44 kWh
+                Kosten bei 0,37 €/kWh:
+                166,44 kWh × 0,37 € = 61,58 € pro Jahr <br>
+                während ein Lottoschein mind. 2.50 kostet für eine Ziehung. <br>
+                🎟️ Lotto-Ausgaben pro Jahr:
+                2,50 € × 52 Wochen = 130 € / Jahr
+            </p>
+        </div>
     </div>
     <script src="./script.js" defer></script>
 </body>
+
 </html>

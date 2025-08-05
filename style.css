@@ -1,12 +1,62 @@
-body{
+body {
     display: flex;
     justify-content: center;
+    font-family: monospace;
 }
-.lottoContainer{
-    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+
+.lottoContainer {
+    box-shadow: inset 4px 4px 42px 11px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 500px;
+    max-width: 380px;
     border: solid black 1px;
-    height: 300px;
+    height: 540px;
+
+    padding: 10px;
+}
+
+h1,
+h3 {
     text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5;
+    justify-self: center;
+    width: 115px;
+}
+
+input {
+    display: block;
+    width: 31px;
+    margin: 5px;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+#submitButton {
+    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#resultContainer {
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.reloadButton {
+    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#btcText{
+    font-family: serif;
+    font-size: small;
 }

@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lottosimulation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./create.js" defer></script>
 </head>
 
-<body>
+<body onload="init()">
     <div id="lottoContainer" class="lottoContainer">
-        <h1>Lottosimulation</h1>
-        <h3>How often do you think,<br>will it take to win with only one Lottoticket?</h3>
+        <h2>Lottosimulation</h2>
+        <h3 id="underTitleStartOne" class="">How often do you think,<br>will it take to win with only one Lottoticket?
+        </h3>
+        <h3 id="underTitleResult" class="d-none">This is what it could take to win the Jackpot, without the SUPER 6</h3>
+        <h4 id="underTitleStartTwo" class="">Put in your numbers</h4>
         <form id="lottoTicketNumbersInput" onsubmit="handleCreateLottoTicketNumbers(event)">
             <label for="number1">First number:</label>
             <input type="number" min="1" max="49" id="number1" name="number1" required><br>
@@ -30,26 +34,28 @@
         <div id="resultContainer" class="resultContainer d-none">
             <p id="resultText"></p>
             <button id="reloadButton" class="reloadButton d-none" onclick="reloadPage()">Retry</button>
+            <button id="moreWorthButton" class="d-none" onclick="pushMoreWorthButton()">What would be more
+                worthwhile?</button>
             <p id="btcText" class="d-none">
-                Angenommen du hättest einen 130 Euro SOLO Bitcoinminer zu laufen. <br>
+                Suppose you were running a €120 SOLO Bitcoin miner. <br>
                 Hardware: <br>
-                130 € Solo-Miner
-                700 GH/s
+                €130 Solo Miner
+                600 - 800 GH/s
                 25 J/TH
-                Verbrauch: 19 W (24/7/365) <br>
-                🎯 Gewinnchancen:
-                Bitcoin-Block finden <b>(pro Tag)</b>:
-                1 zu 9.188.277 <br>
-                6 Richtige im Lotto <b>(ohne Superzahl)</b>:
-                1 zu 15.537.573 <br>
-                💰 Stromkosten:
-                Jahresverbrauch:
-                0,019 kW × 8760 h = 166,44 kWh
-                Kosten bei 0,37 €/kWh:
-                166,44 kWh × 0,37 € = 61,58 € pro Jahr <br>
-                während ein Lottoschein mind. 2.50 kostet für eine Ziehung. <br>
-                🎟️ Lotto-Ausgaben pro Jahr:
-                2,50 € × 52 Wochen = 130 € / Jahr
+                Consumption: 19 W (24/7/365) <br>
+                🎯 Chances of winning:
+                Finding a Bitcoin block <b>(per day)</b>:
+                1 in 9,188,277 <br>
+                6 correct numbers in the lottery <b>(without super number)</b>:
+                1 in 15,537,573 <br>
+                💰 Electricity costs:
+                Annual consumption:
+                0.019 kW × 8760 h = 166.44 kWh
+                Cost at €0.37/kWh:
+                166.44 kWh × €0.37 = €61.58 per year <br>
+                while a lottery ticket costs at least €2.50 per draw. <br>
+                🎟️ Annual lottery expenses:
+                €2.50 × 52 weeks = €130 / year
             </p>
         </div>
     </div>

@@ -1,3 +1,7 @@
+function init() {
+    createHeader();
+    createFooter();
+}
 let lottoTicketNumbers = [];
 
 const max = 49;
@@ -68,8 +72,15 @@ function showResult() {
     Gezogene Zahlen: ${drawnNumbers.sort((a, b) => a - b).join(", ")}`;
     document.getElementById("resultContainer").classList.remove("d-none");
     document.getElementById("lottoTicketNumbersInput").classList.add("d-none");
+    document.getElementById("underTitleStartOne").classList.add("d-none");
+    document.getElementById("underTitleStartTwo").classList.add("d-none");
+    document.getElementById("underTitleResult").classList.remove("d-none");
     document.getElementById("reloadButton").classList.remove("d-none");
-    document.getElementById("btcText").classList.remove("d-none");
+    document.getElementById("moreWorthButton").classList.remove("d-none");
+}
+
+function pushMoreWorthButton() {
+document.getElementById("btcText").classList.remove("d-none");
 }
 
 function reloadPage() {

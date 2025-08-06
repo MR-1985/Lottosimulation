@@ -35,10 +35,6 @@ body {
     max-width: 380px;
     min-width: 260px;
     border: solid black 1px;
-    /* height: 540px; */
-    /* height:  calc(100vh - 138px); */
-    /* padding: 10px; */
-    /* margin-top: 50px; */
     margin-top: 172px;
     margin-bottom: 50px;
     margin-left: auto;
@@ -48,7 +44,7 @@ body {
 h2,
 h3,
 h4,
-p{
+p {
     text-align: center;
     padding-inline: 10px;
 }
@@ -78,6 +74,7 @@ input {
     box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+
 #moreWorthButton {
     margin-top: 10px;
 }

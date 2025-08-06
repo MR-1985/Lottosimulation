@@ -80,7 +80,7 @@ function showResult() {
 }
 
 function pushMoreWorthButton() {
-document.getElementById("btcText").classList.remove("d-none");
+    document.getElementById("btcText").classList.remove("d-none");
 }
 
 function reloadPage() {

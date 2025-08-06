@@ -26,3 +26,10 @@ Click the comparison button ("What might be a better idea")
 🎯 Purpose of the Project
 This simulator aims to demonstrate just how unlikely it is to win the jackpot (6 correct numbers) in a 6/49 lottery.
 The optional comparison serves as a thought-provoking or humorous reminder that there are often smarter ways to use your time and money than hoping for the big win.
+
+## 📄 License
+
+This project is proprietary.  
+**All rights reserved by Marco Rößler.**  
+No permission is granted to use, copy, modify, or distribute any part of the source code of *Lottosimulation*.  
+For inquiries, please contact the author directly.

@@ -7,15 +7,16 @@
     <title>Lottosimulation</title>
     <link rel="stylesheet" href="style.css">
     <script src="./create.js" defer></script>
+    <script src="./template.js" defer></script>
 </head>
 
 <body onload="init()">
     <div id="lottoContainer" class="lottoContainer">
         <h2>Lottosimulation</h2>
-        <h3 id="underTitleStartOne" class="">How often do you think,<br>will it take to win with only one Lottoticket?
+        <h3 id="underTitleStartOne" class="">How long do you think it will <br> take if you play a lottery ticket <br> once a week, without the Super 6?
         </h3>
         <h3 id="underTitleResult" class="d-none">This is what it could take to win the Jackpot, without the SUPER 6</h3>
-        <h4 id="underTitleStartTwo" class="">Put in your numbers</h4>
+        <h4 id="underTitleStartTwo" class="">Put in your 6 numbers from 1 to 49</h4>
         <form id="lottoTicketNumbersInput" onsubmit="handleCreateLottoTicketNumbers(event)">
             <label for="number1">First number:</label>
             <input type="number" min="1" max="49" id="number1" name="number1" required><br>
@@ -33,6 +34,7 @@
         </form>
         <div id="resultContainer" class="resultContainer d-none">
             <p id="resultText"></p>
+            <p id="additionCost"></p>
             <button id="reloadButton" class="reloadButton d-none" onclick="reloadPage()">Retry</button>
             <button id="moreWorthButton" class="d-none" onclick="pushMoreWorthButton()">What would be more
                 worthwhile?</button>

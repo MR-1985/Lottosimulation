@@ -52,6 +52,10 @@ p {
     padding-inline: 10px;
 }
 
+h4 {
+    font-style: italic;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -76,10 +80,19 @@ input {
 #moreWorthButton {
     box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #f9cd5f;
 }
+
+#reloadButton{
+    width: 250px;
+}
+
 
 #moreWorthButton {
     margin-top: 10px;
+    background-color: #9b5a5a;
+    width: 250px;
 }
 
 #resultContainer {
@@ -88,6 +101,8 @@ input {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .reloadButton {
@@ -98,4 +113,8 @@ input {
 #btcText {
     font-family: serif;
     font-size: small;
+}
+
+#additionCost {
+    color: rgb(169 0 0 / 82%);
 }

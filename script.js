@@ -18,20 +18,20 @@ function handleCreateLottoTicketNumbers(event) {
     checkIfMillionär();
     showResult();
 
-    console.log(`Versuch ${count}: führte mit den Zahlen, ${drawnNumbers}, zum Jackpot!`);
+    console.log(`Draw ${count}: resulted in a jackpot with the numbers ${drawnNumbers}!`);
     console.log(lottoTicketNumbers);
-    console.log(`${count} Ziehungen hat es gebraucht, bis die Lottoscheinnummern gezogen wurden.`);
+    console.log(`It took ${count} draws until the lottery ticket numbers were drawn.`);
 }
 
 function createLottoTicketNumbers() {
     for (let i = 1; i <= 6; i++) {
         const value = parseInt(document.getElementById(`number${i}`).value);
         if (isNaN(value) || value < min || value > max) {
-            alert(`Ungültiger Wert in Feld ${i}: Bitte gib eine Zahl zwischen ${min} und ${max} ein.`);
+            alert(`Invalid value in field ${i}: Please enter a number between ${min} & ${max}.`);
             return false;
         }
         if (lottoTicketNumbers.includes(value)) {
-            alert(`Doppelte Zahl in Feld ${i}: ${value}. Bitte jede Zahl nur einmal verwenden.`);
+            alert(`Duplicate number in field ${i}: ${value}. Please use each number only once.`);
             return false;
         }
         (lottoTicketNumbers).push(value);
@@ -67,9 +67,10 @@ function clearAll() {
 
 function showResult() {
     document.getElementById("resultText").innerHTML =
-        `Jackpot nach ${count} Ziehungen!<br>
-    Deine Zahlen: ${lottoTicketNumbers.join(", ")}<br>
-    Gezogene Zahlen: ${drawnNumbers.sort((a, b) => a - b).join(", ")}`;
+    `Jackpot after ${count} draws!<br>
+    Your numbers: ${lottoTicketNumbers.join(", ")}<br>
+    Drawn numbers: ${drawnNumbers.sort((a, b) => a - b).join(", ")}`;
+    document.getElementById("additionCost").innerHTML = additionCostTemplate();
     document.getElementById("resultContainer").classList.remove("d-none");
     document.getElementById("lottoTicketNumbersInput").classList.add("d-none");
     document.getElementById("underTitleStartOne").classList.add("d-none");

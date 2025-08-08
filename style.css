@@ -7,7 +7,7 @@ body {
     height: calc(100vh - 138px);
     box-sizing: border-box;
     background: linear-gradient(to right, lightgray, gray);
-
+    padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 
 .header,
@@ -84,7 +84,7 @@ input {
     border: 1px solid #f9cd5f;
 }
 
-#reloadButton{
+#reloadButton {
     width: 250px;
 }
 
